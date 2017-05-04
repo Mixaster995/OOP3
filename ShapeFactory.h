@@ -30,7 +30,7 @@ public:
 		std::cout << NewSquare << "\n";
 		return NewSquare;
 	}
-	static Polyline CreateLine()
+	static const Polyline& CreateLine()
 	{
 		int size = rand() % 100 + 1;
 		Container<Point> dots;
@@ -42,7 +42,7 @@ public:
 		std::cout << NewLine << "\n";
 		return NewLine;
 	}
-	static Polygone CreateNgon()
+	static const Polygone& CreateNgon()
 	{
 		int size = rand() % 100 + 1;
 		Container<Point> dots;

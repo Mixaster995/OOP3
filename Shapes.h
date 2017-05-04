@@ -5,13 +5,14 @@
 #include"math.h"
 #include"Base.h"
 const double Pi = 3.14159;
-double Counter = 0;
+
 class Shape : public Printable
 {
 public:
+	static double Counter;
 	Shape()
 	{
-		Counter ++;
+		Counter++;
 	}
 	Shape(const Shape& shape)
 	{
@@ -27,6 +28,7 @@ public:
 		Counter--;
 	}
 };
+double Shape::Counter = 0;
 class Point : public Shape, public Named
 {
 public:
